@@ -1,0 +1,31 @@
+.btn{
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 3px;
+    border-width: 0px;
+    background-color: $brand-color;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    &:hover{
+        background-color: $brand-color-hover;
+    }
+}
+
+.btn-grey{
+    background-color: $brand-color-grey;
+    &:hover{
+        background-color: $brand-color-grey-hover;
+    }
+}
+
+.btn-disabled{
+    background-color: $brand-color-disabled;
+    &:hover{
+        background-color: $brand-color-disabled;
+    }
+}

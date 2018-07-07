@@ -1,0 +1,17 @@
+/* Colors */
+$paragraph-color: #000000;
+$brand-color: #f58220;
+$color-dark: darken($brand-color, 10%);
+$color: lighten($brand-color, 10%);
+$brand-color-hover: #ffa200;
+$brand-color-grey: #979797;
+$brand-color-grey-hover:#bababa;
+$brand-color-disabled: #e3e3e3;
+
+/* Font sizes */
+$paragraph-font-size: 16px;
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+$brand-font: 'Roboto', sans-serif;
+$paragraph-font: 'Roboto', sans-serif;
