@@ -1,0 +1,102 @@
+.section--topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+
+.topbar-left {
+    width: 188px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    .logo {
+        padding-left: 20px;
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+    .hamburger {
+        a {
+            color: #999;
+            font-size: 20px;
+            padding-right: 18px;
+        }
+    }
+}
+
+.topbar-right {
+    width: calc(100% - 188px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: {
+        color: #e3e3e3;
+        style: solid;
+        width: 1px;
+    }
+    p {
+        font-size: 20px;
+        font-weight: 400;
+        color: #9c9c9c;
+        margin: 0;
+    }
+    a {
+        font-size: 20px;
+        color: #9c9c9c;
+        padding-left: 18px;
+        padding-right: 18px;
+        &:hover {
+            color: #333333;
+        }
+    }
+    div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        border-left: {
+            color: #e3e3e3;
+            style: solid;
+            width: 1px;
+        }
+    }
+    .wallet {
+        justify-content: space-around;
+        a:last-of-type {
+            font-size: 11px;
+        }
+    }
+    .notifications {
+        justify-content: center;
+        a{
+            position: relative;
+        }
+        i {
+            &::after{
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $brand-color;
+                position: absolute;
+                left: 52%;
+                top: 10%;
+            }
+        }
+    }
+    .profile {
+        justify-content: space-around;
+        i {
+            font-size: 20px;
+            color: #9c9c9c;
+            padding-left: 18px;
+        }
+        a {
+            @extend .link-l;
+        }
+    }
+    .exit {
+        justify-content: center;
+    }
+}
