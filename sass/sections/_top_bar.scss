@@ -1,11 +1,14 @@
 .section--topbar {
     width: 100%;
-    height: 60px;
     display: flex;
+    @media (max-width:767px) {
+        flex-direction: column;
+    }
 }
 
 .topbar-left {
     width: 188px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +55,7 @@
         }
     }
     div {
-        height: 100%;
+        height: 60px;
         display: flex;
         align-items: center;
         border-left: {
@@ -98,5 +101,8 @@
     }
     .exit {
         justify-content: center;
+    }
+    @media (max-width:767px) {
+        flex-direction: column;
     }
 }

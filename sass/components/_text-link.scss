@@ -20,8 +20,8 @@ p,
 }
 
 a,
-.link-s {
-    font-size: 13px;
+.link {
+    font-size: inherit;
     line-height: 42px;
     color: #56819f;
     font-weight: 300;
@@ -31,7 +31,12 @@ a,
     }
 }
 
+.link-s {
+    @extend .link;
+    font-size: 13px;
+}
+
 .link-l{
-    @extend .link-s;
+    @extend .link;
     font-size: 16px;
 }

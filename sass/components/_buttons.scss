@@ -13,6 +13,7 @@
     text-decoration: none;
     &:hover{
         background-color: $brand-color-hover;
+        color: #fff;
     }
 }
 
@@ -20,6 +21,7 @@
     background-color: $brand-color-grey;
     &:hover{
         background-color: $brand-color-grey-hover;
+        color: #fff;
     }
 }
 
@@ -27,5 +29,6 @@
     background-color: $brand-color-disabled;
     &:hover{
         background-color: $brand-color-disabled;
+        color: #fff;
     }
 }
