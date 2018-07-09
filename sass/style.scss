@@ -9,10 +9,10 @@
 @import "components/text-link";
 /* Sections */
 @import "sections/top_bar";
-
+@import "sections/sidebar";
 @import "sections/registration_form";
-/* Pages / Views */
 
+/* Pages / Views */
 @import "pages/registration";
 body {
     font-family: $brand-font;
