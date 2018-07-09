@@ -27,6 +27,9 @@
             padding-right: 18px;
         }
     }
+    @media (max-width:767px) {
+        width: 100vw;
+    }
 }
 
 .topbar-right {
@@ -38,6 +41,9 @@
         color: #e3e3e3;
         style: solid;
         width: 1px;
+    }
+    @media (max-width:767px) {
+        border-width: 0px;
     }
     p {
         font-size: 20px;
@@ -61,13 +67,25 @@
         border-left: {
             color: #e3e3e3;
             style: solid;
-            width: 1px;
+            width: 1px; 
+        }
+        @media (max-width:767px) {
+            width: 100%;
+            border-left: 0px;
+            border-bottom: {
+                color: #e3e3e3;
+                style: solid;
+                width: 1px;   
+            }
         }
     }
     .wallet {
         justify-content: space-around;
         a:last-of-type {
             font-size: 11px;
+        }
+        @media (max-width:767px) {
+            justify-content: center;
         }
     }
     .notifications {
@@ -98,11 +116,15 @@
         a {
             @extend .link-l;
         }
+        @media (max-width:767px) {
+            justify-content: center;
+        }
     }
     .exit {
         justify-content: center;
     }
     @media (max-width:767px) {
         flex-direction: column;
+        width: 100vw;
     }
 }

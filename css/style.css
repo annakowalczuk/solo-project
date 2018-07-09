@@ -532,6 +532,9 @@ a,
     color: #999;
     font-size: 20px;
     padding-right: 18px; }
+  @media (max-width: 767px) {
+    .topbar-left {
+      width: 100vw; } }
 
 .topbar-right {
   width: calc(100% - 188px);
@@ -541,6 +544,9 @@ a,
   border-bottom-color: #e3e3e3;
   border-bottom-style: solid;
   border-bottom-width: 1px; }
+  @media (max-width: 767px) {
+    .topbar-right {
+      border-width: 0px; } }
   .topbar-right p {
     font-size: 20px;
     font-weight: 400;
@@ -560,10 +566,20 @@ a,
     border-left-color: #e3e3e3;
     border-left-style: solid;
     border-left-width: 1px; }
+    @media (max-width: 767px) {
+      .topbar-right div {
+        width: 100%;
+        border-left: 0px;
+        border-bottom-color: #e3e3e3;
+        border-bottom-style: solid;
+        border-bottom-width: 1px; } }
   .topbar-right .wallet {
     justify-content: space-around; }
     .topbar-right .wallet a:last-of-type {
       font-size: 11px; }
+    @media (max-width: 767px) {
+      .topbar-right .wallet {
+        justify-content: center; } }
   .topbar-right .notifications {
     justify-content: center; }
     .topbar-right .notifications a {
@@ -583,11 +599,15 @@ a,
       font-size: 20px;
       color: #9c9c9c;
       padding-left: 18px; }
+    @media (max-width: 767px) {
+      .topbar-right .profile {
+        justify-content: center; } }
   .topbar-right .exit {
     justify-content: center; }
   @media (max-width: 767px) {
     .topbar-right {
-      flex-direction: column; } }
+      flex-direction: column;
+      width: 100vw; } }
 
 /* Pages / Views */
 body {
