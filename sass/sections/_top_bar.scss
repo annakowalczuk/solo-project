@@ -1,4 +1,7 @@
 .section--topbar {
+    * {
+        box-sizing: border-box;
+    }
     width: 100%;
     display: flex;
     @media (max-width:767px) {
@@ -8,11 +11,11 @@
 
 .topbar-left {
     width: 188px;
-    height: 60px;
+    height: 61px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #000;
     .logo {
         padding-left: 20px;
         img {
@@ -23,7 +26,7 @@
     .hamburger {
         a {
             color: #999;
-            font-size: 20px;
+            font-size: 22px;
             padding-right: 18px;
         }
     }
