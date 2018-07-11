@@ -1,19 +1,49 @@
 * {
     box-sizing: border-box;
-}
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .container-fluid {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
 // Rows
 .row {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
 // Columns
-
-@for $i from 1 through 12 {
-    .col-#{$i} {
+@mixin grid($prefix) {
+    @for $i from 1 through 12 {
+      .col-#{$prefix}-#{$i} {
         flex-basis: $i * 100% / 12;
-        min-height: 1px;
+        max-width: $i * 100% / 12;
+      }
     }
-}
+  }
+
+  @media(max-width: 767px) {
+    @include grid('sm');
+  }
+  
+  @media(min-width: 768px) {
+    @include grid('md');
+  }
+  
+  @media(min-width: 992px) {
+    @include grid('lg');
+  }
+  
+  @media(min-width: 1200px) {
+    @include grid('xl');
+  }

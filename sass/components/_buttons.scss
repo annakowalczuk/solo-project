@@ -17,6 +17,15 @@
     }
 }
 
+.btn-small{
+    @extend .btn;
+    font-size: 16px;
+    padding: 0;
+    width: 41px;
+    text-align: center;
+    outline: none;
+}
+
 .btn-grey{
     background-color: $brand-color-grey;
     &:hover{
