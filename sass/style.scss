@@ -2,11 +2,13 @@
 @import "mixins";
 @import "normalize";
 @import "layout";
-/* Components */
 
+/* Components */
 @import "components/form_field";
 @import "components/buttons";
 @import "components/text-link";
+@import "components/grid";
+
 /* Sections */
 @import "sections/top_bar";
 @import "sections/sidebar";

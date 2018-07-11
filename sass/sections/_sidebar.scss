@@ -1,12 +1,18 @@
+
+
 .section--sidebar {
     background: #000;
     height: 100vh;
     width: 188px;
-    @media (max-width:767px) {
+    @media (max-width: 767px) {
         width: 100vw;
         height: auto;
-        // position: absolute;
-        // top:61px;
+        position: absolute;
+        top: 61px;
+        display: none;
+        &.show {
+            display: block;
+        }
     }
 }
 
@@ -72,8 +78,8 @@
             width: 43px;
             height: 43px;
             border-radius: 50%;
-            margin-right:10px;
-            &::after{
+            margin-right: 10px;
+            &::after {
                 content: "";
                 width: 11px;
                 height: 11px;
@@ -86,6 +92,5 @@
         a {
             font-size: 14px;
         }
-        
     }
 }
