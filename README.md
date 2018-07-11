@@ -1,1 +1,1 @@
-# solo-project
+# https://annakowalczuk.github.io/solo-project/

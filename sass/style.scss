@@ -1,5 +1,10 @@
 @import "variables";
 @import "mixins";
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import "Glyphter";
+
 @import "normalize";
 @import "layout";
 
@@ -22,3 +27,7 @@ body {
     font-family: $brand-font;
     margin: 0;
 }
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
