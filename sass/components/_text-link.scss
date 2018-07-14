@@ -3,6 +3,7 @@
     line-height: 42px;
     color: #a6a6a6;
     text-transform: uppercase;
+    margin:0;
 }
 
 .section-header {
@@ -11,12 +12,17 @@
     text-transform: none;
 }
 
+.line-header {
+    @extend .section-header;
+}
+
 p,
 .text {
     font-size: 14px;
     line-height: 42px;
     color: #333333;
     font-weight: 300;
+    margin: 0;
 }
 
 a,
@@ -26,7 +32,7 @@ a,
     color: #56819f;
     font-weight: 300;
     text-decoration: none;
-    &:hover{
+    &:hover {
         color: #ffa200;
     }
 }
@@ -36,7 +42,7 @@ a,
     font-size: 13px;
 }
 
-.link-l{
+.link-l {
     @extend .link;
     font-size: 16px;
 }

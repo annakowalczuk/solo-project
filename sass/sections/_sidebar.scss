@@ -6,10 +6,8 @@
     top: 61px;
     left: 0px;
     @media (max-width: 767px) {
-        width: 100vw;
+        width: 100%;
         height: auto;
-        position: absolute;
-        top: 61px;
         display: none;
         &.show {
             display: block;
@@ -72,10 +70,8 @@
         text-transform: uppercase;
     }
     div {
-        display: flex;
-        justify-content: flex-start;
-        position: relative;
         .manager-photo {
+            position: relative;
             width: 43px;
             height: 43px;
             border-radius: 50%;
@@ -91,6 +87,8 @@
             }
         }
         a {
+            display: flex;
+            justify-content: flex-start;
             font-size: 14px;
         }
     }
