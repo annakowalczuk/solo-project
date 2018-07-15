@@ -11,6 +11,7 @@
     line-height: 40px;
     display: inline-block;
     text-decoration: none;
+    outline: none;
     &:hover{
         background-color: $brand-color-hover;
         color: #fff;
@@ -23,7 +24,6 @@
     padding: 0;
     width: 41px;
     text-align: center;
-    outline: none;
 }
 
 .btn-grey{
