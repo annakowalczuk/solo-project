@@ -411,17 +411,23 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .topbar-right .profile a:hov
 
 .page-links button { display: block; margin-top: 24px; margin-bottom: 24px; margin-left: auto; margin-right: auto; }
 
-.page-links .table-row { border-bottom: 1px solid #e3e3e3; height: 59px; }
+.page-links .table-row { border-bottom: 1px solid #e3e3e3; }
 
 .page-links .table-row:first-of-type { border-top: 1px solid #e3e3e3; }
 
 .page-links .table-row .line-header, .page-links .table-row a { line-height: 57px; }
 
-.page-links .table-row .line-header { padding-left: 17px; }
+.page-links .table-row .line-header { height: 59px; padding-left: 17px; }
 
-.page-links .table-row .link-l, .page-links .table-row .topbar-right .profile a, .topbar-right .profile .page-links .table-row a { padding-left: 31px; overflow: hidden; }
+@media (max-width: 767px) { .page-links .table-row .line-header { -ms-flex-order: 1; order: 1; } }
 
-.page-links .table-row .selection { display: -ms-flexbox; display: flex; -ms-flex-pack: end; justify-content: flex-end; }
+.page-links .table-row .link-l, .page-links .table-row .topbar-right .profile a, .topbar-right .profile .page-links .table-row a { height: 59px; padding-left: 31px; overflow: hidden; }
+
+@media (min-width: 768px) and (max-width: 991px) { .page-links .table-row .link-l, .page-links .table-row .topbar-right .profile a, .topbar-right .profile .page-links .table-row a { padding-left: 0; } }
+
+@media (max-width: 767px) { .page-links .table-row .link-l, .page-links .table-row .topbar-right .profile a, .topbar-right .profile .page-links .table-row a { padding-left: 17px; -ms-flex-order: 3; order: 3; } }
+
+.page-links .table-row .selection { height: 59px; display: -ms-flexbox; display: flex; -ms-flex-pack: end; justify-content: flex-end; visibility: hidden; }
 
 .page-links .table-row .selection a:nth-of-type(1) { padding-right: 23px; }
 
@@ -431,7 +437,15 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .topbar-right .profile a:hov
 
 .page-links .table-row .selection .icon-trash:hover { color: #333333; }
 
+@media (max-width: 991px) { .page-links .table-row .selection { visibility: visible; } }
+
+@media (max-width: 767px) { .page-links .table-row .selection { -ms-flex-order: 2; order: 2; } }
+
 .page-links .table-row:hover { background-color: #e3e3e3; }
+
+.page-links .table-row:hover .selection { visibility: visible; }
+
+@media (max-width: 991px) { .page-links .table-row:nth-child(odd) { background-color: #e3e3e3; } }
 
 body { font-family: "Roboto", sans-serif; margin: 0; }
 
