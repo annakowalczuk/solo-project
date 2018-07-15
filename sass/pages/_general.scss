@@ -136,7 +136,7 @@
         .line-header {
             height: 59px;
             padding-left: 17px;
-            @media(max-width: 767px){
+            @media(max-width: 767px) {
                 order: 1;
             }
         }
@@ -144,10 +144,10 @@
             height: 59px;
             padding-left: 31px;
             overflow: hidden;
-            @media (min-width: 768px) and (max-width: 991px){
+            @media (min-width: 768px) and (max-width: 991px) {
                 padding-left: 0;
             }
-            @media(max-width: 767px){
+            @media(max-width: 767px) {
                 padding-left: 17px;
                 order: 3;
             }
@@ -157,32 +157,34 @@
             display: flex;
             justify-content: flex-end;
             visibility: hidden;
-            a:nth-of-type(1){
+            a:nth-of-type(1) {
                 padding-right: 23px;
             }
-            a:nth-of-type(2){
+            a:nth-of-type(2) {
                 padding-right: 26px;
             }
             .icon-trash {
-                color: #9b9b9b; 
+                color: #9b9b9b;
                 &:hover {
                     color: #333333;
                 }
             }
-            @media (max-width: 991px){
+            @media (max-width: 991px) {
                 visibility: visible;
             }
-            @media (max-width:767px){
+            @media (max-width:767px) {
                 order: 2;
             }
         }
-        &:hover {
-            background-color: #e3e3e3;
-            .selection{
-                visibility: visible;
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: #e3e3e3;
+                .selection {
+                    visibility: visible;
+                }
             }
         }
-        @media (max-width:991px){
+        @media (max-width:991px) {
             &:nth-child(odd) {
                 background-color: #e3e3e3;
             }

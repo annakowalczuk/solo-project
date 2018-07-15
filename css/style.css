@@ -441,9 +441,8 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .topbar-right .profile a:hov
 
 @media (max-width: 767px) { .page-links .table-row .selection { -ms-flex-order: 2; order: 2; } }
 
-.page-links .table-row:hover { background-color: #e3e3e3; }
-
-.page-links .table-row:hover .selection { visibility: visible; }
+@media (min-width: 992px) { .page-links .table-row:hover { background-color: #e3e3e3; }
+  .page-links .table-row:hover .selection { visibility: visible; } }
 
 @media (max-width: 991px) { .page-links .table-row:nth-child(odd) { background-color: #e3e3e3; } }
 
