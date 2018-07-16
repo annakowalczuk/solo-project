@@ -4,13 +4,15 @@
     width: 188px;
     position: fixed;
     top: 61px;
-    left: 0px;
+    left: 0;
     @media (max-width: 767px) {
         width: 100%;
         height: auto;
         display: none;
         &.show {
             display: block;
+            position: relative;
+            top: 0;
         }
     }
 }
