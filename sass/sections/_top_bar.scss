@@ -77,7 +77,7 @@
         border-left: {
             color: #e3e3e3;
             style: solid;
-            width: 1px; 
+            width: 1px;
         }
         @media (max-width:767px) {
             width: 100%;
@@ -85,7 +85,7 @@
             border-bottom: {
                 color: #e3e3e3;
                 style: solid;
-                width: 1px;   
+                width: 1px;
             }
         }
     }
@@ -100,11 +100,11 @@
     }
     .notifications {
         justify-content: center;
-        a{
+        a {
             position: relative;
         }
         i {
-            &::after{
+            &::after {
                 content: "";
                 width: 8px;
                 height: 8px;
@@ -112,7 +112,7 @@
                 background-color: $brand-color;
                 position: absolute;
                 left: 52%;
-                top: 10%;
+                top: 15%;
             }
         }
     }
@@ -135,7 +135,12 @@
     }
     @media (max-width:767px) {
         flex-direction: column;
-        width: 100%;
-        margin-top: 61px;
+        width: 100%; // margin-top: 61px;
+    }
+}
+
+.visible-lg {
+    @media (max-width: 767px) {
+        display: none;
     }
 }

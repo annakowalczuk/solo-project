@@ -7,13 +7,51 @@
     left: 0;
     @media (max-width: 767px) {
         width: 100%;
-        height: auto;
         display: none;
-        &.show {
-            display: block;
-            position: relative;
-            top: 0;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
         }
+        &.show {
+            display: block; // position: relative;
+            // top: 0;
+        }
+    }
+}
+
+.visible-sm {
+    background-color: #000;
+    .topbar-right>div {
+        height: 39px;
+        color: #818181;
+        p,
+        a,
+        i {
+            font-size: 14px;
+            line-height: 41px;
+            color: #818181;
+        }
+        a {
+            padding-left: 16px;
+        }
+    }
+    .wallet {
+        justify-content: flex-start;
+    }
+    .notifications {
+        justify-content: flex-start;
+    }
+    .profile {
+        justify-content: flex-start;
+        i {
+            padding-left: 16px;
+        }
+    }
+    .exit {
+        justify-content: flex-start;
+    }
+    @media (min-width:768px) {
+        display: none;
     }
 }
 
