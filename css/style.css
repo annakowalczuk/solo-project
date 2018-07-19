@@ -215,6 +215,8 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .topbar-right .profile a:hov
 
 .link-l, .topbar-right .profile a { font-size: 16px; }
 
+[class*='icon-'] { display: inline-block; margin-top: 3px; }
+
 * { box-sizing: border-box; }
 
 .container { width: 100%; max-width: 1170px; margin: 0 auto; }
@@ -312,11 +314,11 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .topbar-right .profile a:hov
 
 @media (max-width: 767px) { .topbar-right .wallet { -ms-flex-pack: center; justify-content: center; } }
 
-.topbar-right .notifications { -ms-flex-pack: center; justify-content: center; }
+.topbar-right .notifications, .topbar-right .visible-sm .notifications-and-exit, .visible-sm .topbar-right .notifications-and-exit { -ms-flex-pack: center; justify-content: center; }
 
-.topbar-right .notifications a { position: relative; }
+.topbar-right .notifications a, .topbar-right .visible-sm .notifications-and-exit a, .visible-sm .topbar-right .notifications-and-exit a { position: relative; }
 
-.topbar-right .notifications i::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background-color: #f58220; position: absolute; left: 52%; top: 15%; }
+.topbar-right .notifications .icon-notification::after, .topbar-right .visible-sm .notifications-and-exit .icon-notification::after, .visible-sm .topbar-right .notifications-and-exit .icon-notification::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background-color: #f58220; position: absolute; left: 52%; top: 15%; }
 
 .topbar-right .profile { -ms-flex-pack: distribute; justify-content: space-around; }
 
@@ -330,33 +332,15 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .topbar-right .profile a:hov
 
 @media (max-width: 767px) { .visible-lg { display: none; } }
 
-.section--sidebar { background: #000; height: calc(100vh - 61px); width: 188px; position: fixed; top: 61px; left: 0; }
+.section--sidebar { height: calc(100% - 61px); width: 188px; position: fixed; top: 61px; left: 0; }
+
+@media (min-width: 768px) { .section--sidebar { background-color: #000; } }
 
 @media (max-width: 767px) { .section--sidebar { width: 100%; display: none; overflow: auto; }
   .section--sidebar::-webkit-scrollbar { display: none; }
   .section--sidebar.show { display: block; } }
 
-.visible-sm { background-color: #000; }
-
-.visible-sm .topbar-right > div { height: 39px; color: #818181; }
-
-.visible-sm .topbar-right > div p, .visible-sm .topbar-right > div a, .visible-sm .topbar-right > div i { font-size: 14px; line-height: 41px; color: #818181; }
-
-.visible-sm .topbar-right > div a { padding-left: 16px; }
-
-.visible-sm .wallet { -ms-flex-pack: start; justify-content: flex-start; }
-
-.visible-sm .notifications { -ms-flex-pack: start; justify-content: flex-start; }
-
-.visible-sm .profile { -ms-flex-pack: start; justify-content: flex-start; }
-
-.visible-sm .profile i { padding-left: 16px; }
-
-.visible-sm .exit { -ms-flex-pack: start; justify-content: flex-start; }
-
-@media (min-width: 768px) { .visible-sm { display: none; } }
-
-.sidebar-menu { padding-bottom: 30px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #333; }
+.sidebar-menu { padding-bottom: 30px; background: #000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #333; }
 
 .sidebar-menu ul { list-style-type: none; margin: 0; padding: 0; }
 
@@ -372,7 +356,7 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .topbar-right .profile a:hov
 
 .sidebar-menu ul li:hover::before { content: ''; width: 4px; height: 41px; display: inline-block; background: #f58220; position: absolute; }
 
-.sidebar-manager { padding-left: 20px; padding-top: 16px; padding-bottom: 16px; }
+.sidebar-manager { padding-left: 20px; padding-top: 16px; padding-bottom: 16px; background: #000; }
 
 .sidebar-manager h6 { letter-spacing: 0px; line-height: 42px; margin: 0; font-size: 14px; font-weight: 500; color: #808080; text-transform: uppercase; }
 
@@ -381,6 +365,20 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .topbar-right .profile a:hov
 .sidebar-manager div .manager-photo::after { content: ""; width: 11px; height: 11px; border-radius: 50%; background-color: #04ae00; position: absolute; left: 75%; }
 
 .sidebar-manager div a { display: -ms-flexbox; display: flex; -ms-flex-pack: start; justify-content: flex-start; font-size: 14px; }
+
+.visible-sm { background-color: #fff; }
+
+.visible-sm .topbar-right > div { height: 39px; color: #818181; }
+
+.visible-sm .topbar-right > div p, .visible-sm .topbar-right > div a, .visible-sm .topbar-right > div i { font-size: 14px; line-height: 41px; color: #818181; }
+
+.visible-sm .topbar-right > div a { padding-left: 16px; }
+
+.visible-sm .topbar-right > div:last-of-type { -ms-flex-pack: center; justify-content: center; }
+
+.visible-sm .profile i { padding-left: 16px; }
+
+@media (min-width: 768px) { .visible-sm { display: none; } }
 
 /* Pages / Views */
 .section--general { padding-left: 188px; padding-top: 61px; overflow-x: hidden; background-color: #f5f5f2; }
