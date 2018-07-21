@@ -11,4 +11,10 @@
         toggleMenu()
     });
 
+    flatpickr('.date-range input',{
+        altInput: true,
+        altFormat: 'd.m.Y',
+        dateFormat: 'Y-m-d',
+    });
+
 })();

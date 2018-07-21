@@ -1,0 +1,25 @@
+.page {
+    margin-top: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+    margin-left: 18px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    h3 {
+        padding: 20px 18px;
+        margin: 0;
+        font-weight: 400;
+        line-height: normal;
+        border-bottom: {
+            width: 1px;
+            style: solid;
+            color: #e3e3e3;
+        }
+    }
+    .container {
+        max-width: 686px;
+        @media (max-width: 991px) {
+            max-width: 100%
+        }
+    }
+}
