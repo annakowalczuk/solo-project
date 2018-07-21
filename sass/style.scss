@@ -14,6 +14,7 @@
 @import "components/text-link";
 @import "components/grid";
 @import "components/page";
+@import "components/table";
 
 /* Sections */
 @import "sections/top_bar";
@@ -23,6 +24,7 @@
 /* Pages / Views */
 @import "pages/registration";
 @import "pages/general";
+@import "pages/banners";
 
 body {
     font-family: $brand-font;

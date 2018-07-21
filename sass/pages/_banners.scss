@@ -1,0 +1,9 @@
+.page-banners {
+    @extend .page-links;
+    .line-link {
+        padding-left: 0;
+        @media(max-width: 767px) {
+            padding-left: 17px;
+        }
+    }
+}
