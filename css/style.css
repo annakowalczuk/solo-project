@@ -277,13 +277,13 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
   .col-xl-11 { -ms-flex: 0 0 91.66667%; flex: 0 0 91.66667%; max-width: 91.66667%; }
   .col-xl-12 { -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; } }
 
-.page, .page-statistic, .page-links, .page-banners { margin-top: 18px; margin-right: 18px; margin-bottom: 18px; margin-left: 18px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+.page, .page-statistic, .page-links, .page-banners, .page-personal-data { margin-top: 18px; margin-right: 18px; margin-bottom: 18px; margin-left: 18px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
 
-.page h3, .page-statistic h3, .page-links h3, .page-banners h3 { padding: 20px 18px; margin: 0; font-weight: 400; line-height: normal; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e3e3e3; }
+.page h3, .page-statistic h3, .page-links h3, .page-banners h3, .page-personal-data h3 { padding: 20px 18px; margin: 0; font-weight: 400; line-height: normal; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e3e3e3; }
 
-.page .container, .page-statistic .container, .page-links .container, .page-banners .container { max-width: 686px; }
+.page .container, .page-statistic .container, .page-links .container, .page-banners .container, .page-personal-data .container { max-width: 686px; }
 
-@media (max-width: 991px) { .page .container, .page-statistic .container, .page-links .container, .page-banners .container { max-width: 100%; } }
+@media (max-width: 991px) { .page .container, .page-statistic .container, .page-links .container, .page-banners .container, .page-personal-data .container { max-width: 100%; } }
 
 .table-row { border-bottom: 1px solid #e3e3e3; }
 
@@ -361,7 +361,9 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .topbar-right .notifications a, .topbar-right .visible-sm .notifications-and-exit a, .visible-sm .topbar-right .notifications-and-exit a { position: relative; }
 
-.topbar-right .notifications .icon-notification::after, .topbar-right .visible-sm .notifications-and-exit .icon-notification::after, .visible-sm .topbar-right .notifications-and-exit .icon-notification::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background-color: #f58220; position: absolute; left: 52%; top: 15%; }
+.topbar-right .notifications .icon-notification::after, .topbar-right .visible-sm .notifications-and-exit .icon-notification::after, .visible-sm .topbar-right .notifications-and-exit .icon-notification::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background-color: #f58220; position: absolute; left: 52%; top: 18%; }
+
+@media (max-width: 767px) { .topbar-right .notifications .icon-notification::after, .topbar-right .visible-sm .notifications-and-exit .icon-notification::after, .visible-sm .topbar-right .notifications-and-exit .icon-notification::after { left: 51%; top: 26%; } }
 
 .topbar-right .profile { -ms-flex-pack: distribute; justify-content: space-around; }
 
@@ -424,7 +426,7 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 @media (min-width: 768px) { .visible-sm { display: none; } }
 
 /* Pages / Views */
-.section--general { padding-left: 188px; padding-top: 61px; overflow-x: hidden; background-color: #f5f5f2; }
+.section--general { padding-left: 188px; padding-top: 61px; overflow-x: hidden; background-color: #f5f5f2; height: 100vh; }
 
 @media (max-width: 767px) { .section--general { padding-left: 0; } }
 
@@ -455,7 +457,7 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .page-statistic .chart h4 { padding-bottom: 40px; }
 
-@media (max-width: 767px) { .page-statistic .chart h4 { padding-left: 17px; } }
+@media (max-width: 991px) { .page-statistic .chart h4 { padding-left: 17px; } }
 
 .page-statistic .chart img { width: 100%; height: auto; padding-left: 17px; padding-right: 17px; }
 
@@ -466,6 +468,22 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 .page-banners .line-link { padding-left: 0; }
 
 @media (max-width: 767px) { .page-banners .line-link { padding-left: 17px; } }
+
+.page-personal-data .container { max-width: 455px; }
+
+.page-personal-data .field { padding-top: 42px; padding-bottom: 28px; border-bottom: 1px solid #e3e3e3; }
+
+.page-personal-data .field button { display: block; margin-right: auto; margin-bottom: 7px; margin-left: auto; padding-right: 28px; padding-left: 28px; }
+
+@media (max-width: 767px) { .page-personal-data .field { padding-top: 20px; padding-bottom: 20px; } }
+
+.page-personal-data label { font-size: 16px; height: 40px; line-height: 40px; color: #a6a6a6; font-weight: bold; }
+
+@media (max-width: 767px) { .page-personal-data label { margin-left: 5%; margin-right: 5%; } }
+
+.page-personal-data input { font-size: 14px; height: 40px; color: #333333; font-weight: 300; width: 309px; border-radius: 3px; border: 1px solid #e3e3e3; padding-left: 17px; margin-bottom: 14px; }
+
+@media (max-width: 767px) { .page-personal-data input { max-width: 90%; margin-left: 5%; margin-right: 5%; } }
 
 body { font-family: "Roboto", sans-serif; margin: 0; }
 

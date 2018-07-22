@@ -1,0 +1,50 @@
+.page-personal-data {
+    @extend .page;
+    .container {
+        max-width: 455px;
+    }
+    .field {
+        padding-top: 42px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid #e3e3e3;
+        button{
+            display: block;
+            margin-right: auto;
+            margin-bottom: 7px;
+            margin-left: auto;
+            padding-right: 28px;
+            padding-left: 28px;
+        }
+        @media (max-width: 767px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    label {
+        font-size: 16px;
+        height: 40px;
+        line-height: 40px;
+        color: #a6a6a6;
+        font-weight: bold;
+        @media (max-width: 767px) {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+    input {
+        font-size: 14px;
+        height: 40px;
+        color: #333333;
+        font-weight: 300;
+        width: 309px;
+        border-radius: 3px;
+        border: 1px solid #e3e3e3;
+        padding-left: 17px;
+        margin-bottom: 14px;
+        @media (max-width: 767px) {
+            max-width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+}
