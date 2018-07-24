@@ -207,13 +207,13 @@ template { display: none; }
 
 p, .text { font-size: 14px; line-height: 42px; color: #333333; font-weight: 300; margin: 0; }
 
-a, .link, .link-s, .link-l, .table-row .line-link, .topbar-right .profile a { font-size: inherit; line-height: 42px; color: #56819f; font-weight: 300; text-decoration: none; }
+a, .link, .link-s, .link-l, .table-row .line-link, .pagination, .topbar-right .profile a { font-size: inherit; line-height: 42px; color: #56819f; font-weight: 300; text-decoration: none; }
 
-a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover, .topbar-right .profile a:hover { color: #ffa200; }
+a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover, .pagination:hover, .topbar-right .profile a:hover { color: #ffa200; }
 
 .link-s { font-size: 13px; }
 
-.link-l, .table-row .line-link, .topbar-right .profile a { font-size: 16px; }
+.link-l, .table-row .line-link, .pagination, .topbar-right .profile a { font-size: 16px; }
 
 [class*='icon-'] { display: inline-block; margin-top: 3px; }
 
@@ -319,6 +319,14 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
   .table-row:hover .line-selection { visibility: visible; } }
 
 @media (max-width: 991px) { .table-row:nth-child(odd) { background-color: #e3e3e3; } }
+
+.pagination i { color: #a3a3a3; }
+
+.pagination a { display: inline-block; width: 41px; height: 40px; text-align: center; }
+
+.pagination a:hover { font-size: 16px; color: #a6a6a6; font-weight: bold; border-radius: 3px; background-color: #f1f3f3; }
+
+.pagination a:hover i { color: #333333; }
 
 /* Sections */
 .section--topbar { width: 100%; display: -ms-flexbox; display: flex; position: fixed; left: 0; top: 0; }
@@ -475,15 +483,11 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .page-personal-data .field button { display: block; margin-right: auto; margin-bottom: 7px; margin-left: auto; padding-right: 28px; padding-left: 28px; }
 
-@media (max-width: 767px) { .page-personal-data .field { padding-top: 20px; padding-bottom: 20px; } }
+@media (max-width: 767px) { .page-personal-data .field { padding-top: 20px; padding-bottom: 20px; padding-right: 15px; padding-left: 15px; } }
 
 .page-personal-data label { font-size: 16px; height: 40px; line-height: 40px; color: #a6a6a6; font-weight: bold; }
 
-@media (max-width: 767px) { .page-personal-data label { margin-left: 5%; margin-right: 5%; } }
-
-.page-personal-data input { font-size: 14px; height: 40px; color: #333333; font-weight: 300; width: 309px; border-radius: 3px; border: 1px solid #e3e3e3; padding-left: 17px; margin-bottom: 14px; }
-
-@media (max-width: 767px) { .page-personal-data input { max-width: 90%; margin-left: 5%; margin-right: 5%; } }
+.page-personal-data input { font-size: 14px; height: 40px; color: #333333; font-weight: 300; width: 100%; max-width: 309px; border-radius: 3px; border: 1px solid #e3e3e3; padding-left: 17px; margin-bottom: 14px; }
 
 body { font-family: "Roboto", sans-serif; margin: 0; }
 

@@ -18,6 +18,8 @@
         @media (max-width: 767px) {
             padding-top: 20px;
             padding-bottom: 20px;
+            padding-right: 15px;
+            padding-left: 15px;
         }
     }
     label {
@@ -26,25 +28,18 @@
         line-height: 40px;
         color: #a6a6a6;
         font-weight: bold;
-        @media (max-width: 767px) {
-            margin-left: 5%;
-            margin-right: 5%;
-        }
     }
     input {
         font-size: 14px;
         height: 40px;
         color: #333333;
         font-weight: 300;
-        width: 309px;
+        width: 100%;
+        max-width: 309px;
         border-radius: 3px;
         border: 1px solid #e3e3e3;
         padding-left: 17px;
         margin-bottom: 14px;
-        @media (max-width: 767px) {
-            max-width: 90%;
-            margin-left: 5%;
-            margin-right: 5%;
-        }
+        
     }
 }

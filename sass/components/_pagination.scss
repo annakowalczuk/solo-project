@@ -1,0 +1,22 @@
+.pagination {
+    @extend .link-l;
+    i {
+        color: #a3a3a3;
+    }
+    a {
+        display: inline-block;
+        width: 41px;
+        height: 40px;
+        text-align: center;
+        &:hover {
+            font-size: 16px;
+            color: #a6a6a6;
+            font-weight: bold;
+            border-radius: 3px;
+            background-color: #f1f3f3;
+            i {
+                color: #333333;
+            }
+        }
+    }
+}
