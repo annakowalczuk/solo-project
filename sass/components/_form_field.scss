@@ -1,3 +1,21 @@
+.date-filter {
+    border-bottom: 1px solid #e3e3e3;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+        margin-left: 16px;
+    }
+    @media (max-width: 767px) {
+        flex-direction: column;
+        button {
+            margin-top: 10px;
+            margin-left: 0;
+        }
+    }
+}
+
 .date-range {
     box-sizing: border-box;
     width: 325px;

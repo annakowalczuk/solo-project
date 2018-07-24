@@ -171,6 +171,13 @@ template { display: none; }
 [hidden] { display: none; }
 
 /* Components */
+.date-filter { border-bottom: 1px solid #e3e3e3; height: 110px; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
+
+.date-filter button { margin-left: 16px; }
+
+@media (max-width: 767px) { .date-filter { -ms-flex-direction: column; flex-direction: column; }
+  .date-filter button { margin-top: 10px; margin-left: 0; } }
+
 .date-range { box-sizing: border-box; width: 325px; height: 40px; line-height: 40px; border-width: 1px; border-style: solid; border-color: #e3e3e3; border-radius: 3px; text-align: center; display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-align: center; align-items: center; }
 
 .date-range input { border-width: 0px; border-style: none; text-align: center; font-size: 14px; color: #333; font-weight: 300; outline-style: none; overflow: hidden; }
@@ -277,13 +284,13 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
   .col-xl-11 { -ms-flex: 0 0 91.66667%; flex: 0 0 91.66667%; max-width: 91.66667%; }
   .col-xl-12 { -ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%; } }
 
-.page, .page-statistic, .page-links, .page-banners, .page-personal-data { margin-top: 18px; margin-right: 18px; margin-bottom: 18px; margin-left: 18px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+.page, .page-statistic, .page-links, .page-banners, .page-personal-data, .page-payout { margin-top: 18px; margin-right: 18px; margin-bottom: 18px; margin-left: 18px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
 
-.page h3, .page-statistic h3, .page-links h3, .page-banners h3, .page-personal-data h3 { padding: 20px 18px; margin: 0; font-weight: 400; line-height: normal; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e3e3e3; }
+.page h3, .page-statistic h3, .page-links h3, .page-banners h3, .page-personal-data h3, .page-payout h3 { padding: 20px 18px; margin: 0; font-weight: 400; line-height: normal; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e3e3e3; }
 
-.page .container, .page-statistic .container, .page-links .container, .page-banners .container, .page-personal-data .container { max-width: 686px; }
+.page .container, .page-statistic .container, .page-links .container, .page-banners .container, .page-personal-data .container, .page-payout .container { max-width: 686px; }
 
-@media (max-width: 991px) { .page .container, .page-statistic .container, .page-links .container, .page-banners .container, .page-personal-data .container { max-width: 100%; } }
+@media (max-width: 991px) { .page .container, .page-statistic .container, .page-links .container, .page-banners .container, .page-personal-data .container, .page-payout .container { max-width: 100%; } }
 
 .table-row { border-bottom: 1px solid #e3e3e3; }
 
@@ -319,6 +326,8 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
   .table-row:hover .line-selection { visibility: visible; } }
 
 @media (max-width: 991px) { .table-row:nth-child(odd) { background-color: #e3e3e3; } }
+
+.pagination { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-line-pack: center; align-content: center; }
 
 .pagination i { color: #a3a3a3; }
 
@@ -440,13 +449,6 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .page-statistic .container { padding-top: 41px; padding-bottom: 55px; }
 
-.page-statistic .date-filter { border-bottom: 1px solid #e3e3e3; height: 110px; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
-
-.page-statistic .date-filter button { margin-left: 16px; }
-
-@media (max-width: 767px) { .page-statistic .date-filter { -ms-flex-direction: column; flex-direction: column; }
-  .page-statistic .date-filter button { margin-top: 10px; margin-left: 0; } }
-
 .page-statistic .row { -ms-flex-pack: justify; justify-content: space-between; }
 
 .page-statistic h6 { display: inline-block; }
@@ -487,7 +489,33 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .page-personal-data label { font-size: 16px; height: 40px; line-height: 40px; color: #a6a6a6; font-weight: bold; }
 
-.page-personal-data input { font-size: 14px; height: 40px; color: #333333; font-weight: 300; width: 100%; max-width: 309px; border-radius: 3px; border: 1px solid #e3e3e3; padding-left: 17px; margin-bottom: 14px; }
+.page-personal-data input { font-size: 14px; height: 40px; color: #333333; font-weight: 300; width: 100%; max-width: 309px; border-radius: 3px; border: 1px solid #e3e3e3; padding-left: 17px; margin-bottom: 14px; outline-style: none; }
+
+.page-payout { padding-bottom: 23px; }
+
+.table-container { max-width: 1021px; padding-top: 31px; padding-right: 18px; padding-bottom: 21px; padding-left: 18px; margin-left: auto; margin-right: auto; }
+
+.scroll-wrapper { display: block; width: 100%; overflow-x: auto; }
+
+.scroll-wrapper table { width: 100%; max-width: 100%; }
+
+.bordered-table { font-size: 13px; color: #333333; font-weight: 300; text-align: left; border-collapse: collapse; white-space: nowrap; }
+
+.bordered-table tr:hover:not(:first-of-type) { background-color: #f0f3f3; }
+
+.bordered-table th { line-height: 30px; color: #a6a6a6; font-weight: bold; }
+
+.bordered-table th:hover { cursor: pointer; }
+
+.bordered-table th, .bordered-table td { height: 59px; padding-left: 18px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e3e3e3; }
+
+.bordered-table td { line-height: 59px; }
+
+.bordered-table .icon-arrow-up-small { display: none; }
+
+.sorted div { display: inline-block; height: 30px; border-radius: 3px; padding-left: 11px; background-color: #f5f5f1; color: #333333 !important; }
+
+.sorted div .icon-arrow-up-small, .sorted div .icon-arrow-down-small { display: inline-block; color: #a3a3a3; font-size: 9px; margin-top: 0px; padding-left: 14px; padding-right: 15px; }
 
 body { font-family: "Roboto", sans-serif; margin: 0; }
 

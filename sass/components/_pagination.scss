@@ -1,4 +1,8 @@
 .pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
     @extend .link-l;
     i {
         color: #a3a3a3;
