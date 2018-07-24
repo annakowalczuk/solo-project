@@ -326,7 +326,7 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .pagination a:hover { font-size: 16px; color: #a6a6a6; font-weight: bold; border-radius: 3px; background-color: #f1f3f3; }
 
-.pagination a:hover i { color: #333333; }
+.pagination a:hover i { color: #333333; margin-top: 0; }
 
 /* Sections */
 .section--topbar { width: 100%; display: -ms-flexbox; display: flex; position: fixed; left: 0; top: 0; }
