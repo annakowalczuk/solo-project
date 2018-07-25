@@ -362,6 +362,18 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .sorted div .icon-arrow-up-small, .sorted div .icon-arrow-down-small { display: inline-block; color: #a3a3a3; font-size: 9px; margin-top: 0px; padding-left: 14px; padding-right: 15px; }
 
+.overlay { position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; overflow: auto; padding: 30px; display: none; }
+
+.overlay::webkit-scrollbar { display: none; }
+
+.overlay .modal { max-width: 600px; margin: auto; background-color: #ffffff; position: relative; padding: 30px; display: none; }
+
+.overlay .modal .btn-close { position: absolute; top: 0; right: 0; padding: 5px 10px; }
+
+.overlay.show { display: -ms-flexbox; display: flex; }
+
+.modal.show { display: block; }
+
 /* Sections */
 .section--topbar { width: 100%; display: -ms-flexbox; display: flex; position: fixed; left: 0; top: 0; }
 
