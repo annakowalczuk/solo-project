@@ -37,6 +37,7 @@
         line-height: 30px;
         color: rgb(166, 166, 166);
         font-weight: bold;
+        padding-right: 17px;
         &:hover {
             cursor: pointer;
         }
@@ -60,6 +61,7 @@
 }
 
 .sorted {
+        padding-left: 7px !important;
     div {
         display: inline-block;
         height: 30px;

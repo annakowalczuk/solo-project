@@ -4,7 +4,7 @@
     position: fixed;
     top: 61px;
     left: 0;
-    @media (min-width:768px){
+    @media (min-width: 768px) {
         background-color: #000;
     }
     @media (max-width: 767px) {
@@ -104,6 +104,10 @@
 
 .visible-sm {
     background-color: #fff;
+    [class*='icon-'] {
+        display: inline-block;
+        margin-top: 3px;
+    }
     .topbar-right>div {
         height: 39px;
         color: #818181;
@@ -117,12 +121,11 @@
         a {
             padding-left: 16px;
         }
-        &:last-of-type{
+        &:last-of-type {
             justify-content: center;
         }
     }
-    .wallet {
-    }
+    .wallet {}
     .profile {
         i {
             padding-left: 16px;
@@ -131,8 +134,7 @@
     .notifications-and-exit {
         @extend .notifications;
     }
-    .exit {
-    }
+    .exit {}
     @media (min-width:768px) {
         display: none;
     }

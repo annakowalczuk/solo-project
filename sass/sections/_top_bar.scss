@@ -7,6 +7,10 @@
     position: fixed;
     left: 0;
     top: 0;
+    [class*='icon-'] {
+        display: inline-block;
+        margin-top: 3px;
+    }
     @media (max-width:767px) {
         flex-direction: column;
         position: relative;
