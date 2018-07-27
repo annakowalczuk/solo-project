@@ -44,7 +44,7 @@
     }
 
     document.querySelector('.exit').addEventListener('click', function () {
-        openModal('#myModal')
+        openModal('#quit-modal')
     });
 
     // obsluga kalendarza

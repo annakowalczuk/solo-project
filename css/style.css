@@ -195,9 +195,9 @@ template { display: none; }
 
 @media (max-width: 767px) { .date-range { max-width: 95%; margin-left: auto; margin-right: auto; } }
 
-.btn, .btn-small { height: 40px; padding-left: 20px; padding-right: 20px; border-radius: 3px; border-width: 0px; background-color: #f58220; color: #fff; font-size: 18px; font-weight: 300; line-height: 40px; display: inline-block; text-decoration: none; outline: none; }
+.btn, .btn-small, .btn-grey, .btn-disabled { height: 40px; padding-left: 20px; padding-right: 20px; border-radius: 3px; border-width: 0px; background-color: #f58220; color: #fff; font-size: 18px; font-weight: 300; line-height: 40px; display: inline-block; text-decoration: none; outline: none; }
 
-.btn:hover, .btn-small:hover { background-color: #ffa200; color: #fff; }
+.btn:hover, .btn-small:hover, .btn-grey:hover, .btn-disabled:hover { background-color: #ffa200; color: #fff; }
 
 .btn-small { font-size: 16px; padding: 0; width: 41px; text-align: center; }
 
@@ -346,27 +346,27 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .bordered-table tr:hover:not(:first-of-type) { background-color: #f0f3f3; }
 
-.bordered-table th { line-height: 30px; color: #a6a6a6; font-weight: bold; padding-right: 17px; }
+.bordered-table th { color: #a6a6a6; font-weight: bold; padding: 13px 8px; }
+
+.bordered-table th div { display: inline-block; padding: 10px; }
+
+.bordered-table th div i { display: none; }
 
 .bordered-table th:hover { cursor: pointer; }
 
-.bordered-table th, .bordered-table td { height: 59px; padding-left: 18px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e3e3e3; }
+.bordered-table th:hover div { border-radius: 3px; background-color: #f5f5f1; color: #333333; }
 
-.bordered-table td { line-height: 59px; }
+.bordered-table th, .bordered-table td { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e3e3e3; }
 
-.bordered-table .icon-arrow-up-small { display: none; }
+.bordered-table td { padding: 23px 18px; }
 
-.sorted { padding-left: 7px !important; }
-
-.sorted div { display: inline-block; height: 30px; border-radius: 3px; padding-left: 11px; background-color: #f5f5f1; color: #333333 !important; }
-
-.sorted div .icon-arrow-up-small, .sorted div .icon-arrow-down-small { display: inline-block; color: #a3a3a3; font-size: 9px; margin-top: 0px; padding-left: 14px; padding-right: 15px; }
+.sorted .icon-arrow-up-small, .bordered-table th:active .icon-arrow-up-small, .sorted .icon-arrow-down-small, .bordered-table th:active .icon-arrow-down-small { display: inline-block; color: #a3a3a3; font-size: 9px; margin-top: 0px; padding-left: 14px; }
 
 .overlay { position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; overflow: auto; padding: 30px; display: none; }
 
 .overlay::webkit-scrollbar { display: none; }
 
-.overlay .modal { max-width: 600px; margin: auto; background-color: #ffffff; position: relative; padding: 30px; display: none; }
+.overlay .modal { max-width: 600px; margin: auto; background-color: #ffffff; position: relative; display: none; }
 
 .overlay .modal .btn-close { position: absolute; top: 0; right: 0; padding: 5px 10px; }
 
@@ -419,8 +419,6 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .topbar-right .notifications .icon-notification::after, .topbar-right .visible-sm .notifications-and-exit .icon-notification::after, .visible-sm .topbar-right .notifications-and-exit .icon-notification::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background-color: #f58220; position: absolute; left: 52%; top: 18%; }
 
-@media (max-width: 767px) { .topbar-right .notifications .icon-notification::after, .topbar-right .visible-sm .notifications-and-exit .icon-notification::after, .visible-sm .topbar-right .notifications-and-exit .icon-notification::after { left: 51%; top: 26%; } }
-
 .topbar-right .profile { -ms-flex-pack: distribute; justify-content: space-around; }
 
 .topbar-right .profile i { font-size: 20px; color: #9c9c9c; padding-left: 18px; }
@@ -441,7 +439,7 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
   .section--sidebar::-webkit-scrollbar { display: none; }
   .section--sidebar.show { display: block; } }
 
-.sidebar-menu { padding-bottom: 30px; background: #000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #333; }
+.sidebar-menu { padding-bottom: 30px; background-color: #000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #333; }
 
 .sidebar-menu ul { list-style-type: none; margin: 0; padding: 0; }
 
@@ -455,9 +453,9 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .sidebar-menu ul li:hover a { color: #fff; }
 
-.sidebar-menu ul li:hover::before { content: ''; width: 4px; height: 41px; display: inline-block; background: #f58220; position: absolute; }
+.sidebar-menu ul li:hover::before { content: ''; width: 4px; height: 41px; display: inline-block; background-color: #f58220; position: absolute; }
 
-.sidebar-manager { padding-left: 20px; padding-top: 16px; padding-bottom: 16px; background: #000; }
+.sidebar-manager { padding-left: 20px; padding-top: 16px; padding-bottom: 16px; background-color: #000; }
 
 .sidebar-manager h6 { letter-spacing: 0px; line-height: 42px; margin: 0; font-size: 14px; font-weight: 500; color: #808080; text-transform: uppercase; }
 
@@ -467,13 +465,15 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .sidebar-manager div a { display: -ms-flexbox; display: flex; -ms-flex-pack: start; justify-content: flex-start; font-size: 14px; }
 
-.visible-sm { background-color: #fff; }
+@media (max-width: 768px) { .sidebar-manager { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #333; } }
 
-.visible-sm [class*='icon-'] { display: inline-block; margin-top: 3px; }
+.visible-sm .topbar-right { background-color: #000; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #333; border-top-width: 1px; border-top-style: solid; border-top-color: #333; }
 
-.visible-sm .topbar-right > div { height: 39px; color: #818181; }
+.visible-sm .topbar-right > div { height: 41px; color: #818181; border: none; }
 
-.visible-sm .topbar-right > div p, .visible-sm .topbar-right > div a, .visible-sm .topbar-right > div i { font-size: 14px; line-height: 41px; color: #818181; }
+.visible-sm .topbar-right > div p, .visible-sm .topbar-right > div a { font-size: 14px; line-height: 41px; color: #818181; }
+
+.visible-sm .topbar-right > div i { font-size: 14px; color: #818181; }
 
 .visible-sm .topbar-right > div a { padding-left: 16px; }
 
@@ -530,9 +530,17 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .page-personal-data label { font-size: 16px; height: 40px; line-height: 40px; color: #a6a6a6; font-weight: bold; }
 
-.page-personal-data input { font-size: 14px; height: 40px; color: #333333; font-weight: 300; width: 100%; max-width: 309px; border-radius: 3px; border: 1px solid #e3e3e3; padding-left: 17px; margin-bottom: 14px; outline-style: none; }
+.page-personal-data input { font-size: 14px; height: 40px; color: #333333; font-weight: 300; width: 100%; border-radius: 3px; border: 1px solid #e3e3e3; padding-left: 17px; padding-right: 17px; margin-bottom: 14px; outline-style: none; }
 
 .page-payout { padding-bottom: 23px; }
+
+#quit-modal { width: 360px; height: 155px; }
+
+#quit-modal h6 { font-size: 16px; color: #a6a6a6; padding-top: 32px; padding-right: 23px; padding-bottom: 22px; padding-left: 23px; margin: 0; font-weight: 400; line-height: normal; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e3e3e3; }
+
+#quit-modal div { display: -ms-flexbox; display: flex; -ms-flex-pack: end; justify-content: flex-end; -ms-flex-align: center; align-items: center; padding-top: 19px; padding-right: 21px; padding-bottom: 23px; padding-left: 21px; }
+
+#quit-modal div .cancel { margin-right: 20px; }
 
 body { font-family: "Roboto", sans-serif; margin: 0; }
 

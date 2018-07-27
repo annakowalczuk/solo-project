@@ -23,7 +23,7 @@
 
 .sidebar-menu {
     padding-bottom: 30px;
-    background: #000;
+    background-color: #000;
     border-bottom: {
         width: 1px;
         style: solid;
@@ -55,7 +55,7 @@
                     width: 4px;
                     height: 41px;
                     display: inline-block;
-                    background: $brand-color;
+                    background-color: $brand-color;
                     position: absolute;
                 }
             }
@@ -67,7 +67,7 @@
     padding-left: 20px;
     padding-top: 16px;
     padding-bottom: 16px;
-    background: #000;
+    background-color: #000;
     h6 {
         letter-spacing: 0px;
         line-height: 42px;
@@ -100,22 +100,41 @@
             font-size: 14px;
         }
     }
+    @media (max-width: 768px) {
+        border-bottom: {
+            width: 1px;
+            style: solid;
+            color: #333;
+        }
+    }
 }
 
 .visible-sm {
-    background-color: #fff;
-    [class*='icon-'] {
-        display: inline-block;
-        margin-top: 3px;
+    .topbar-right {
+        background-color: #000;
+        border-bottom: {
+            width: 1px;
+            style: solid;
+            color: #333;
+        }
+        border-top: {
+            width: 1px;
+            style: solid;
+            color: #333;
+        }
     }
     .topbar-right>div {
-        height: 39px;
+        height: 41px;
         color: #818181;
+        border: none;
         p,
-        a,
-        i {
+        a {
             font-size: 14px;
             line-height: 41px;
+            color: #818181;
+        }
+        i {
+            font-size: 14px;
             color: #818181;
         }
         a {

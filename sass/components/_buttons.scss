@@ -27,6 +27,7 @@
 }
 
 .btn-grey{
+    @extend .btn;
     background-color: $brand-color-grey;
     &:hover{
         background-color: $brand-color-grey-hover;
@@ -35,6 +36,7 @@
 }
 
 .btn-disabled{
+    @extend .btn;
     background-color: $brand-color-disabled;
     &:hover{
         background-color: $brand-color-disabled;
