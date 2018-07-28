@@ -15,11 +15,27 @@
         display: none;
     }
     .modal {
-        max-width: 600px;
+        max-width: 724px;
         margin: auto;
         background-color: #ffffff;
         position: relative;
         display: none;
+        h6 {
+            padding-top: 32px;
+            padding-right: 23px;
+            padding-bottom: 22px;
+            padding-left: 23px;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            color: rgb(166, 166, 166);
+            border-bottom: {
+                width: 1px;
+                style: solid;
+                color: #e3e3e3;
+            }
+        }
         .btn-close {
             position: absolute;
             top: 0;

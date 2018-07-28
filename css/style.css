@@ -366,7 +366,9 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 .overlay::webkit-scrollbar { display: none; }
 
-.overlay .modal { max-width: 600px; margin: auto; background-color: #ffffff; position: relative; display: none; }
+.overlay .modal { max-width: 724px; margin: auto; background-color: #ffffff; position: relative; display: none; }
+
+.overlay .modal h6 { padding-top: 32px; padding-right: 23px; padding-bottom: 22px; padding-left: 23px; margin: 0; font-size: 16px; font-weight: 400; line-height: normal; color: #a6a6a6; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e3e3e3; }
 
 .overlay .modal .btn-close { position: absolute; top: 0; right: 0; padding: 5px 10px; }
 
@@ -536,11 +538,25 @@ a:hover, .link:hover, .link-s:hover, .link-l:hover, .table-row .line-link:hover,
 
 #quit-modal { width: 360px; height: 155px; }
 
-#quit-modal h6 { font-size: 16px; color: #a6a6a6; padding-top: 32px; padding-right: 23px; padding-bottom: 22px; padding-left: 23px; margin: 0; font-weight: 400; line-height: normal; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #e3e3e3; }
-
 #quit-modal div { display: -ms-flexbox; display: flex; -ms-flex-pack: end; justify-content: flex-end; -ms-flex-align: center; align-items: center; padding-top: 19px; padding-right: 21px; padding-bottom: 23px; padding-left: 21px; }
 
 #quit-modal div .cancel { margin-right: 20px; }
+
+#login-modal h6 { padding-top: 20px; padding-right: 19px; padding-bottom: 19px; padding-left: 14px; }
+
+#login-modal div { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; padding: 46px; }
+
+@media (max-width: 767px) { #login-modal div { -ms-flex-direction: column; flex-direction: column; padding: 30px; } }
+
+#login-modal input { display: inline-block; background-position-x: 18px; background-repeat: no-repeat; height: 40px; width: 214px; padding-left: 45px; outline-style: none; border-radius: 3px; color: #9b9b9b; border: 1px solid #e3e3e3; margin-right: 17px; }
+
+#login-modal input[type=text] { background-image: url(../images/icon-login.png); background-position-y: 12px; }
+
+#login-modal input[type=password] { background-image: url(../images/icon-password.png); padding-left: 51px; background-position-y: 14px; }
+
+@media (max-width: 767px) { #login-modal input { width: 100%; margin-right: auto; margin-bottom: 20px; } }
+
+#login-modal button { width: 150px; }
 
 body { font-family: "Roboto", sans-serif; margin: 0; }
 

@@ -45,6 +45,10 @@
 
     document.querySelector('.exit').addEventListener('click', function () {
         openModal('#quit-modal')
+    })
+
+    document.querySelector('.profile').addEventListener('click', function () {
+        openModal('#login-modal')
     });
 
     // obsluga kalendarza

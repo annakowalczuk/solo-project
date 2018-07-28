@@ -1,0 +1,47 @@
+#login-modal {
+    h6 {
+        padding-top: 20px;
+        padding-right: 19px;
+        padding-bottom: 19px;
+        padding-left: 14px;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        padding: 46px;
+        @media (max-width:767px){
+            flex-direction: column;
+            padding: 30px;
+        }
+    }
+    input {
+        display: inline-block;
+        &[type=text] {
+            background-image: url(../images/icon-login.png);
+            background-position-y: 12px;
+        }
+        background-position-x: 18px;
+        background-repeat: no-repeat;
+        &[type=password] {
+            background-image: url(../images/icon-password.png);
+            padding-left: 51px;
+            background-position-y: 14px;
+        }
+        height:40px;
+        width: 214px;
+        padding-left: 45px;
+        outline-style: none;
+        border-radius: 3px;
+        color: #9b9b9b;
+        border: 1px solid #e3e3e3;
+        margin-right:17px;
+        @media (max-width:767px){
+            width: 100%;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+    }
+    button {
+        width: 150px;
+    }
+}

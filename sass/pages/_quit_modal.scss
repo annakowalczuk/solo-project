@@ -1,0 +1,16 @@
+#quit-modal {
+    width: 360px;
+    height: 155px;
+    div{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 19px;
+        padding-right:21px;
+        padding-bottom: 23px;
+        padding-left: 21px;
+        .cancel{
+            margin-right:20px;
+        }
+    }
+}
