@@ -49,6 +49,9 @@
 
     document.querySelector('.profile').addEventListener('click', function () {
         openModal('#login-modal')
+    })
+    document.querySelector('.chat').addEventListener('click', function () {
+        openModal('#chat-modal')
     });
 
     // obsluga kalendarza

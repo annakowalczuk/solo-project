@@ -86,7 +86,7 @@
         <div class="sidebar-manager">
             <h6>your manager</h6>
             <div>
-                <a href="#">
+                <a href="#" class="chat">
                     <div class="manager-photo" style="background-image: url(images/photo.png)"></div>
                     Mikhael E.</a>
             </div>
@@ -358,6 +358,35 @@
                     <button type="submit" class="js--close-modal btn">Enter</button>
                 </div>
             </form>
+        </div>
+        <div class="modal" id="chat-modal">
+            <div class="page-header">
+                <h6>Online chat with your personal manager</h6>
+                <!-- <span class="js--close-modal">x</span> -->
+            </div>
+            <div class="personal-manager">
+                <img src="images/photo.png">
+                <div class="name-and-status">
+                    <p>Michael E.</p>
+                    <div class="status">online</div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="answer">
+                    <p>Hello. Can I help you?</p>
+                </div>
+                <div class="message">
+                    <p>Hello! I would like to know about Postback.</p>
+                </div>
+                <div class="answer">
+                    <p>Ok. 5 min.</p>
+                </div>
+            </div>
+            <form action="" method="POST">
+                <input type="text" name="text-to-send" placeholder="Enter the message">
+                <button type="submit" class="btn">Send</button>
+            </form>
+
         </div>
     </div>
 
