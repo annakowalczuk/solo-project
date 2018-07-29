@@ -11,8 +11,8 @@
 </head>
 
 <body>
-
-    <section class="section--topbar">
+<!-- top bar -->
+<section class="section--topbar">
         <div class="topbar-left">
             <div class="logo">
                 <img src="images/logo.png" alt="logo">
@@ -86,7 +86,7 @@
         <div class="sidebar-manager">
             <h6>your manager</h6>
             <div>
-                <a href="#">
+                <a href="#" class="chat">
                     <div class="manager-photo" style="background-image: url(images/photo.png)"></div>
                     Mikhael E.</a>
             </div>
@@ -119,6 +119,7 @@
         </div>
     </section>
 
+    <!-- section general -->
     <section class="section--general">
 
         <div class="page-banners">
@@ -225,8 +226,59 @@
 
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="js/script.js"></script>
+    <!-- modals -->
+    <div class="overlay" id="overlay">
+            <div class="modal" id="quit-modal">
+                <h6>Do you really want to Quit?</h6>
+                <div>
+                    <button class="js--close-modal btn-grey cancel">Cancel</button>
+                    <button class="js--close-modal btn quit">Quit</button>
+                </div>
+            </div>
+            <div class="modal" id="login-modal">
+                <h6 class="page-header">Login</h6>
+                <form action="" method="POST">
+                    <div class="field">
+                        <input type="text" name="login" placeholder="login name" class="login">
+                        <input type="password" name="password" placeholder="password" class="password">
+                        <button type="submit" class="js--close-modal btn">Enter</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal" id="chat-modal">
+                <div class="page-header">
+                    <span class="js--close-modal">x</span>
+                    <h6>Online chat with your personal manager</h6>
+                </div>
+                <div class="personal-manager">
+                    <img src="images/photo.png">
+                    <div class="name-and-status">
+                        <p>Michael E.</p>
+                        <div class="status">online</div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="answer">
+                        <p>Hello. Can I help you?</p>
+                    </div>
+                    <div class="message">
+                        <p>Hello! I would like to know about Postback.</p>
+                    </div>
+                    <div class="answer">
+                        <p>Ok. 5 min.</p>
+                    </div>
+                </div>
+                <form action="" method="POST">
+                    <input type="text" name="text-to-send" placeholder="Enter the message">
+                    <button type="submit" class="btn">Send</button>
+                </form>
+    
+            </div>
+        </div>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="js/script.js"></script>
 </body>
 
 </html>

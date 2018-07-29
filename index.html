@@ -171,7 +171,7 @@
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 table-col">
                             <div class="chart">
                                 <h4 class="section-header">Earnings chart</h4>
-                                <img src="images/graph.png" alt="chart">
+                                <canvas id="myChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -361,8 +361,8 @@
         </div>
         <div class="modal" id="chat-modal">
             <div class="page-header">
+                <span class="js--close-modal">x</span>
                 <h6>Online chat with your personal manager</h6>
-                <!-- <span class="js--close-modal">x</span> -->
             </div>
             <div class="personal-manager">
                 <img src="images/photo.png">
@@ -390,7 +390,7 @@
         </div>
     </div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="js/script.js"></script>
 </body>
